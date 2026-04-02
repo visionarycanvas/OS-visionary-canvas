@@ -26,7 +26,7 @@
   --text-xlight: #C0BCDA;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
 body{
   background:#fff;
   color:var(--text);
@@ -60,7 +60,7 @@ nav{
 /* ── HERO ── */
 .hero{
   min-height:100vh;display:flex;align-items:center;
-  padding-top:64px;background:transparent;
+  padding-top:64px;background:transparent;overflow:hidden;
 }
 .hero-inner{
   max-width:900px;margin:0 auto;
@@ -410,6 +410,10 @@ footer{background:var(--text);padding:36px 32px;text-align:center;z-index:2;}
   section{padding:72px 0;}
   .pricing-head{padding:32px 24px 24px;}
   .pricing-body{padding:28px 24px;}
+  .satisfaction-bar-wrap{flex-wrap:wrap;gap:16px;padding:20px 20px;}
+  .sat-divider{display:none;}
+  .sat-item{flex:1;min-width:calc(33% - 12px);}
+  .hero-bg-text{display:none;}
 }
 
 /* ── セクション斜めカット ── */
@@ -436,7 +440,7 @@ footer{background:var(--text);padding:36px 32px;text-align:center;z-index:2;}
 .hero-bg-text {
   position:absolute;
   font-family:'DM Serif Display',serif;
-  font-size:clamp(100px,18vw,220px);
+  font-size:clamp(80px,14vw,220px);
   font-weight:700;
   color:rgba(91,0,212,0.04);
   white-space:nowrap;
@@ -922,7 +926,7 @@ footer{background:var(--text);padding:36px 32px;text-align:center;z-index:2;}
       <div class="os-diagram-wrap reveal">
   <svg width="860" height="480" viewBox="0 0 860 480" fill="none"
        xmlns="http://www.w3.org/2000/svg"
-       style="width:100%;max-width:860px;height:auto;overflow:visible;">
+       style="width:100%;max-width:860px;height:auto;">
     <defs>
       <radialGradient id="el_outer" cx="50%" cy="50%" r="50%">
         <stop offset="0%" stop-color="#E9D5FF" stop-opacity="0.55"/>
